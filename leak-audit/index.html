@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Get a Leak Audit | Ovrin</title>
+    <meta name="description" content="Request an Ovrin leak audit for your HVAC company and find where missed calls, after-hours leads, and slow follow-up may be costing booked jobs.">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/script.js" defer></script>
+  </head>
+  <body class="audit-page">
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Ovrin home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>ovrin</span>
+        </a>
+        <a class="button" href="/leak-audit" data-event="header_cta_clicked">Get Leak Audit</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero section" aria-labelledby="audit-title">
+        <h1 id="audit-title">Want me to show where your HVAC leads may be leaking?</h1>
+        <p>Answer a few questions and we&rsquo;ll review your current lead flow before the call.</p>
+      </section>
+
+      <section class="audit-layout section" aria-label="Leak audit request form">
+        <form class="form-card" data-leak-audit-form data-event="form_submitted" data-event-start="form_started">
+          <div class="form-grid">
+            <div class="field">
+              <label for="full-name">Full name</label>
+              <input id="full-name" name="full_name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="company">HVAC company</label>
+              <input id="company" name="company" type="text" autocomplete="organization" required>
+            </div>
+            <div class="field full">
+              <label for="website">Website or Google Business Profile</label>
+              <input id="website" name="website" type="url" inputmode="url" placeholder="https://example.com">
+            </div>
+            <div class="field">
+              <label for="email">Work email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
+
+            <fieldset>
+              <legend class="group-label">How are new leads usually handled today?</legend>
+              <div class="option-row">
+                <label class="pill-option"><input type="radio" name="lead_handling" value="We call back manually"><span>We call back manually</span></label>
+                <label class="pill-option"><input type="radio" name="lead_handling" value="Front desk / CSR"><span>Front desk / CSR</span></label>
+                <label class="pill-option"><input type="radio" name="lead_handling" value="Answering service"><span>Answering service</span></label>
+                <label class="pill-option"><input type="radio" name="lead_handling" value="CRM automations"><span>CRM automations</span></label>
+                <label class="pill-option"><input type="radio" name="lead_handling" value="Not sure"><span>Not sure</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="group-label">How are after-hours calls handled today?</legend>
+              <div class="option-row">
+                <label class="pill-option"><input type="radio" name="after_hours" value="Voicemail"><span>Voicemail</span></label>
+                <label class="pill-option"><input type="radio" name="after_hours" value="Answering service"><span>Answering service</span></label>
+                <label class="pill-option"><input type="radio" name="after_hours" value="We answer live"><span>We answer live</span></label>
+                <label class="pill-option"><input type="radio" name="after_hours" value="Not sure"><span>Not sure</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="group-label">Approx. inbound calls or leads per week</legend>
+              <div class="range-row">
+                <label class="pill-option"><input type="radio" name="weekly_leads" value="0-10"><span>0&ndash;10</span></label>
+                <label class="pill-option"><input type="radio" name="weekly_leads" value="11-25"><span>11&ndash;25</span></label>
+                <label class="pill-option"><input type="radio" name="weekly_leads" value="26-50"><span>26&ndash;50</span></label>
+                <label class="pill-option"><input type="radio" name="weekly_leads" value="51-100"><span>51&ndash;100</span></label>
+                <label class="pill-option"><input type="radio" name="weekly_leads" value="100+"><span>100+</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="group-label">What software do you use today?</legend>
+              <div class="option-row">
+                <label class="pill-option"><input type="radio" name="software" value="ServiceTitan"><span>ServiceTitan</span></label>
+                <label class="pill-option"><input type="radio" name="software" value="Housecall Pro"><span>Housecall Pro</span></label>
+                <label class="pill-option"><input type="radio" name="software" value="Jobber"><span>Jobber</span></label>
+                <label class="pill-option"><input type="radio" name="software" value="Other"><span>Other</span></label>
+                <label class="pill-option"><input type="radio" name="software" value="None / not sure"><span>None / not sure</span></label>
+              </div>
+            </fieldset>
+
+            <p class="consent">By submitting this form, you agree that Ovrin may contact you by email, phone, or text about your leak audit. Message and data rates may apply. You can opt out of text messages at any time by replying STOP.</p>
+
+            <div class="form-actions">
+              <button class="button" type="submit">Request My Leak Audit</button>
+            </div>
+          </div>
+        </form>
+
+        <aside class="next-panel" aria-labelledby="next-title">
+          <h2 id="next-title">What happens next</h2>
+          <ol class="next-steps">
+            <li><span>1</span><strong>We review your setup</strong></li>
+            <li><span>2</span><strong>We spot likely leaks</strong></li>
+            <li><span>3</span><strong>We walk through the findings on a call</strong></li>
+          </ol>
+          <div class="reassurance">No pressure. No obligation. Just clarity.</div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="brand" href="/" aria-label="Ovrin home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>ovrin</span>
+        </a>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="mailto:contact@ovrin.ai">Contact</a>
+        </nav>
+        <div>
+          <p class="disclaimer">Ovrin provides lead-response and workflow support. Results vary by market, offer, team response time, call volume, and implementation.</p>
+          <div class="copyright">&copy; 2026 Ovrin. All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

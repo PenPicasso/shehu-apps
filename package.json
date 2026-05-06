@@ -1,0 +1,14 @@
+{
+  "name": "ovrin-lander",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-ready static landing site for Ovrin.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npx serve . -l 3000",
+    "check": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  }
+}

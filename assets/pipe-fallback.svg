@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 360" role="img" aria-label="Copper pipe with a small leak">
+  <defs>
+    <linearGradient id="copper" x1="0" x2="1">
+      <stop offset="0" stop-color="#8d3f1d"/>
+      <stop offset=".22" stop-color="#d97836"/>
+      <stop offset=".48" stop-color="#f0a05d"/>
+      <stop offset=".68" stop-color="#9d4922"/>
+      <stop offset="1" stop-color="#db7b34"/>
+    </linearGradient>
+    <radialGradient id="dark" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#060404"/>
+      <stop offset=".7" stop-color="#1b0b04"/>
+      <stop offset="1" stop-color="#5f2a16"/>
+    </radialGradient>
+    <filter id="shadow" x="-10%" y="-40%" width="120%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#160904" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect width="1120" height="360" fill="#fff"/>
+  <g filter="url(#shadow)">
+    <path d="M34 131c23-34 56-47 97-37 19 5 35 16 48 32H941c15-21 36-33 62-36 35-4 64 10 84 43-34-5-62 8-84 38 18 22 45 32 81 29-23 34-55 49-95 41-23-5-41-17-55-37H181c-12 20-30 33-54 38-39 9-70-6-93-44 38 5 66-6 84-32-20-26-48-38-84-35Z" fill="#f7f7f5"/>
+    <rect x="120" y="126" width="880" height="80" rx="38" fill="url(#copper)"/>
+    <rect x="120" y="126" width="880" height="32" rx="16" fill="#fff" opacity=".26"/>
+    <ellipse cx="562" cy="168" rx="42" ry="34" fill="url(#dark)"/>
+    <path d="m524 164 22-6 12-27 14 30 35-9-23 22 23 26-36-8-18 29-9-32-33 11 20-24z" fill="#100704"/>
+    <path d="M552 197c-4 31-24 49-24 76 0 14 10 24 23 24s23-10 23-24c0-27-18-44-22-76Z" fill="#d7f7ff" stroke="#0b566d" stroke-width="4"/>
+    <path d="M510 198c-3 23-18 35-18 55 0 11 8 19 18 19s18-8 18-19c0-20-14-32-18-55Z" fill="#e5fbff" stroke="#2a7891" stroke-width="3"/>
+    <path d="M615 200c-3 25-19 38-19 59 0 12 8 20 19 20s19-8 19-20c0-21-16-34-19-59Z" fill="#e5fbff" stroke="#2a7891" stroke-width="3"/>
+  </g>
+</svg>
