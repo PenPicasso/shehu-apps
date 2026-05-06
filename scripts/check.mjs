@@ -7,7 +7,8 @@ const required = [
   "thank-you/index.html",
   "styles.css",
   "script.js",
-  "assets/pipe-hero-960.webp"
+  "assets/hero-static-960.webp",
+  "assets/logo-mark-72.webp"
 ];
 
 const missing = required.filter((file) => !fs.existsSync(path.join(process.cwd(), file)));

@@ -11,9 +11,15 @@ await fs.mkdir(outDir, { recursive: true });
 const assets = [
   {
     source: "Orvin- Final lander.png",
-    name: "pipe-hero",
+    name: "hero-static",
     widths: [640, 960, 1120],
-    crop: { left: 124, top: 208, width: 880, height: 118 }
+    crop: { left: 120, top: 214, width: 895, height: 326 }
+  },
+  {
+    source: "ovrin.jpeg",
+    name: "logo-mark",
+    widths: [72, 120],
+    crop: { left: 542, top: 46, width: 174, height: 174 }
   }
 ];
 
@@ -23,7 +29,7 @@ for (const asset of assets) {
     let pipeline = sharp(input).rotate();
     if (asset.crop) pipeline = pipeline.extract(asset.crop);
     pipeline = pipeline.resize({ width, withoutEnlargement: true });
-    await pipeline.webp({ quality: asset.name === "pipe-hero" ? 84 : 78 }).toFile(path.join(outDir, `${asset.name}-${width}.webp`));
+    await pipeline.webp({ quality: asset.name === "hero-static" ? 88 : 90 }).toFile(path.join(outDir, `${asset.name}-${width}.webp`));
   }
 }
 
