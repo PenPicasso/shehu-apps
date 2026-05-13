@@ -7,6 +7,7 @@
     <meta name="description" content="Ovrin helps HVAC companies recover missed calls, after-hours leads, quote requests, and follow-ups before they turn into lost booked jobs.">
     <link rel="preload" as="image" href="/assets/hero-static-960.webp" imagesrcset="/assets/hero-static-640.webp 640w, /assets/hero-static-960.webp 960w, /assets/hero-static-1120.webp 1120w" imagesizes="(max-width: 700px) 760px, 1000px">
     <link rel="stylesheet" href="/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
     <script src="/script.js" defer></script>
   </head>
   <body>
@@ -41,25 +42,44 @@
               <source type="image/webp" srcset="/assets/hero-static-640.webp 640w, /assets/hero-static-960.webp 960w, /assets/hero-static-1120.webp 1120w" sizes="(max-width: 700px) 760px, 1000px">
               <img src="/assets/pipe-fallback.svg" alt="Copper pipe with recovered HVAC lead cards" width="1120" height="451" fetchpriority="high">
             </picture>
+            <div class="hero-motion-layer" aria-hidden="true">
+              <span class="pipe-energy"></span>
+              <span class="crack-pulse"></span>
+              <span class="motion-drop drop-one"></span>
+              <span class="motion-drop drop-two"></span>
+              <span class="motion-drop drop-three"></span>
+              <span class="motion-drop drop-four"></span>
+              <svg class="route-motion" viewBox="0 0 1120 451" preserveAspectRatio="none" focusable="false">
+                <path class="route route-left" d="M545 229 C515 249 498 262 498 296 C498 319 478 331 451 334"/>
+                <path class="route route-right" d="M595 223 C653 238 678 270 678 318 C678 340 701 348 727 340"/>
+                <path class="route route-booking" d="M571 220 C590 245 612 254 650 254 C688 254 701 241 726 238"/>
+              </svg>
+              <span class="hero-counter counter-job" data-count-to="1250" data-count-prefix="$" data-count-format="comma">$0</span>
+              <span class="hero-counter counter-revenue" data-count-to="24680" data-count-prefix="$" data-count-format="comma">$0</span>
+              <span class="hero-counter counter-booking" data-count-to="540" data-count-suffix=" AM" data-count-time="true">0:00 AM</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="vsl-section section" aria-labelledby="vsl-title">
-        <div class="video-shell">
-          <button class="video-player" type="button" data-vsl-player data-event="vsl_play_clicked" data-event-25="vsl_25_percent_watched" data-event-50="vsl_50_percent_watched" data-event-75="vsl_75_percent_watched" data-event-complete="vsl_completed" aria-label="Play Ovrin walkthrough video">
-            <span class="play-button" aria-hidden="true">
-              <svg viewBox="0 0 48 48"><path d="M16 10v28l24-14L16 10Z"/></svg>
-            </span>
-            <span class="player-bar" aria-hidden="true"><span class="player-progress"></span></span>
-          </button>
+      <section class="proof-band section" aria-labelledby="proof-title">
+        <div class="proof-copy">
+          <p class="eyebrow">Leak audit preview</p>
+          <h2 id="proof-title">A simple audit shows where booked jobs are slipping out.</h2>
+          <p>Ovrin reviews missed calls, after-hours flow, web forms, and follow-up speed so you can see the leak before you buy another ad.</p>
         </div>
-        <div class="vsl-copy">
-          <h2 id="vsl-title">See how HVAC leads leak before you ever know they called.</h2>
-          <p>A short walkthrough showing where missed calls, slow replies, and after-hours gaps quietly turn into lost jobs.</p>
-          <div class="cta-block">
-            <h3>Want me to show where your HVAC leads may be leaking?</h3>
-            <a class="button" href="/leak-audit" data-event="hero_cta_clicked">Get Leak Audit</a>
+        <div class="proof-metrics" aria-label="Lead leak audit outcomes">
+          <div>
+            <strong>4</strong>
+            <span>leak points checked</span>
+          </div>
+          <div>
+            <strong>&lt; 10 min</strong>
+            <span>to request review</span>
+          </div>
+          <div>
+            <strong>1</strong>
+            <span>clear next action</span>
           </div>
         </div>
       </section>

@@ -1,5 +1,8 @@
 node_modules/
 .vercel/
+.env
+.env.*
+!.env.template
 .DS_Store
 *.log
 output/
