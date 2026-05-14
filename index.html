@@ -4,13 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ovrin | HVAC Lead Recovery</title>
-    <meta name="description" content="Ovrin helps HVAC companies recover missed calls, after-hours leads, quote requests, and follow-ups before they turn into lost booked jobs.">
-    <link rel="preload" as="image" href="/assets/hero-static-960.webp" imagesrcset="/assets/hero-static-640.webp 640w, /assets/hero-static-960.webp 960w, /assets/hero-static-1120.webp 1120w" imagesizes="(max-width: 700px) 760px, 1000px">
+    <meta name="description" content="Ovrin helps HVAC companies recover missed calls, after-hours leads, web forms, texts, and booking handoffs before paid demand turns into lost jobs.">
     <link rel="stylesheet" href="/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
     <script src="/script.js" defer></script>
   </head>
-  <body>
+  <body class="home-page">
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="/" aria-label="Ovrin home">
@@ -22,168 +20,213 @@
     </header>
 
     <main>
-      <section class="hero section" aria-labelledby="hero-title">
-        <h1 id="hero-title">Stop losing AC jobs after your phone <span class="accent">drops.</span></h1>
-        <p class="hero-copy">Ovrin catches missed calls, after-hours leads, and quote requests before they turn into someone else&rsquo;s booking.</p>
-
-        <div class="search-visual" aria-label="Search example">
-          <span class="google-g" aria-hidden="true">G</span>
-          <span>missed HVAC calls after hours</span>
-          <svg class="mic-icon" width="34" height="34" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M12 14a3.5 3.5 0 0 0 3.5-3.5v-6a3.5 3.5 0 1 0-7 0v6A3.5 3.5 0 0 0 12 14Zm6-4a1 1 0 1 0-2 0 4 4 0 1 1-8 0 1 1 0 1 0-2 0 6 6 0 0 0 5 5.92V19H8.5a1 1 0 1 0 0 2h7a1 1 0 1 0 0-2H13v-3.08A6 6 0 0 0 18 10Z"/>
-          </svg>
+      <section class="pf-hero section" aria-labelledby="hero-title">
+        <div class="pf-hero-copy">
+          <p class="eyebrow">HVAC lead recovery system</p>
+          <h1 id="hero-title">Recover the HVAC jobs your funnel already paid for.</h1>
+          <p>Ovrin sits between your calls, forms, emails, texts, and calendar so hot leads get a response in under 60 seconds instead of leaking between handoffs.</p>
+          <div class="pf-hero-actions">
+            <a class="button" href="/leak-audit" data-event="hero_cta_clicked">Run My Leak Audit</a>
+            <a class="text-link" href="#funnel">See the funnel</a>
+          </div>
+          <div class="pf-proof-strip" aria-label="Ovrin response proof">
+            <span><strong>&lt;60 sec</strong> response target</span>
+            <span><strong>4</strong> lead channels covered</span>
+            <span><strong>1</strong> booking path</span>
+          </div>
         </div>
 
-        <a class="button hero-quick-cta" href="/leak-audit" data-event="hero_cta_clicked">Get Leak Audit</a>
+        <div class="pf-console" aria-label="Live Ovrin recovery console">
+          <div class="console-top">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Live recovery console</span>
+            <strong>00:42</strong>
+          </div>
+          <div class="console-alert">
+            <span>Missed call detected</span>
+            <strong>Austin, TX</strong>
+          </div>
+          <div class="console-events">
+            <div><span>1</span><p>Text bot replied with availability.</p></div>
+            <div><span>2</span><p>Call bot queued callback for a hot lead.</p></div>
+            <div><span>3</span><p>Booking link sent with service-area check.</p></div>
+          </div>
+          <div class="console-path" aria-label="Recovered lead path">
+            <span>Google</span>
+            <i></i>
+            <span>Phone</span>
+            <i></i>
+            <span>Ovrin</span>
+            <i></i>
+            <span>Calendar</span>
+          </div>
+        </div>
+      </section>
 
-        <div class="hero-visual" aria-label="Copper pipe leak lead recovery visual">
-          <div class="hero-visual-wrap">
-            <picture>
-              <source type="image/webp" srcset="/assets/hero-static-640.webp 640w, /assets/hero-static-960.webp 960w, /assets/hero-static-1120.webp 1120w" sizes="(max-width: 700px) 760px, 1000px">
-              <img src="/assets/pipe-fallback.svg" alt="Copper pipe with recovered HVAC lead cards" width="1120" height="451" fetchpriority="high">
-            </picture>
-            <div class="hero-motion-layer" aria-hidden="true">
-              <span class="pipe-energy"></span>
-              <span class="crack-pulse"></span>
-              <span class="motion-drop drop-one"></span>
-              <span class="motion-drop drop-two"></span>
-              <span class="motion-drop drop-three"></span>
-              <span class="motion-drop drop-four"></span>
-              <svg class="route-motion" viewBox="0 0 1120 451" preserveAspectRatio="none" focusable="false">
-                <path class="route route-left" d="M545 229 C515 249 498 262 498 296 C498 319 478 331 451 334"/>
-                <path class="route route-right" d="M595 223 C653 238 678 270 678 318 C678 340 701 348 727 340"/>
-                <path class="route route-booking" d="M571 220 C590 245 612 254 650 254 C688 254 701 241 726 238"/>
-              </svg>
-              <span class="hero-counter counter-job" data-count-to="1250" data-count-prefix="$" data-count-format="comma">$0</span>
-              <span class="hero-counter counter-revenue" data-count-to="24680" data-count-prefix="$" data-count-format="comma">$0</span>
-              <span class="hero-counter counter-booking" data-count-to="540" data-count-suffix=" AM" data-count-time="true">0:00 AM</span>
+      <section class="pf-funnel section" id="funnel" aria-labelledby="funnel-title">
+        <div class="section-title">
+          <p class="eyebrow">Before and after</p>
+          <h2 id="funnel-title" class="section-heading">The leak is not traffic. It is the handoff.</h2>
+          <p class="section-intro">Most HVAC companies already pay to create demand. Jobs disappear when the next reply, call back, or booking step is too slow.</p>
+        </div>
+
+        <div class="funnel-board" aria-label="Before and after lead funnel">
+          <section class="funnel-row before" aria-labelledby="before-funnel">
+            <div class="funnel-label">
+              <h3 id="before-funnel">Before Ovrin</h3>
+              <span>leads leak between stages</span>
             </div>
-          </div>
+            <div class="funnel-flow">
+              <div class="funnel-stage">
+                <h4>Traffic engine</h4>
+                <div class="chip-grid">
+                  <span class="chip">Google</span><span class="chip">Facebook</span><span class="chip">Content</span><span class="chip">Local</span>
+                </div>
+              </div>
+              <div class="funnel-arrow loss" aria-label="Revenue leaking"></div>
+              <div class="funnel-stage">
+                <h4>Lead channels</h4>
+                <div class="chip-grid">
+                  <span class="chip red">Phone</span><span class="chip red">Form</span><span class="chip red">Email</span><span class="chip red">Text</span>
+                </div>
+              </div>
+              <div class="funnel-arrow loss" aria-label="Revenue leaking"></div>
+              <div class="funnel-stage">
+                <h4>Booking</h4>
+                <div class="chip-grid">
+                  <span class="chip red">Calendar</span><span class="chip red">CSR handoff</span><span class="chip red">Follow-up list</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="funnel-row after" aria-labelledby="after-funnel">
+            <div class="funnel-label">
+              <h3 id="after-funnel">After Ovrin</h3>
+              <span>response under 60 seconds</span>
+            </div>
+            <div class="funnel-flow after-flow">
+              <div class="funnel-stage">
+                <h4>Traffic engine</h4>
+                <div class="chip-grid">
+                  <span class="chip">Google</span><span class="chip">Facebook</span><span class="chip">Content</span><span class="chip">Local</span>
+                </div>
+              </div>
+              <div class="funnel-arrow win" aria-label="Recovered path"></div>
+              <div class="funnel-stage">
+                <h4>Lead channels</h4>
+                <div class="chip-grid">
+                  <span class="chip green">Phone</span><span class="chip green">Form</span><span class="chip green">Email</span><span class="chip green">Text</span>
+                </div>
+              </div>
+              <div class="funnel-arrow win" aria-label="Recovered path"></div>
+              <div class="funnel-stage ovrin-system">
+                <h4>Ovrin system</h4>
+                <div class="chip-grid">
+                  <span class="chip green">Call bot</span><span class="chip green">Text bot</span><span class="chip green">Callback</span><span class="chip green">Speed-to-lead</span>
+                </div>
+                <div class="speed-note">Replies or calls back in under 60 seconds.</div>
+              </div>
+              <div class="funnel-arrow win" aria-label="Recovered path"></div>
+              <div class="funnel-stage">
+                <h4>Booking</h4>
+                <div class="chip-grid">
+                  <span class="chip green">Calendar</span><span class="chip green">Confirmed job</span><span class="chip green">Clear next action</span>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
 
-      <section class="proof-band section" aria-labelledby="proof-title">
-        <div class="proof-copy">
-          <p class="eyebrow">Leak audit preview</p>
-          <h2 id="proof-title">A simple audit shows where booked jobs are slipping out.</h2>
-          <p>Ovrin reviews missed calls, after-hours flow, web forms, and follow-up speed so you can see the leak before you buy another ad.</p>
-        </div>
-        <div class="proof-metrics" aria-label="Lead leak audit outcomes">
-          <div>
-            <strong>4</strong>
-            <span>leak points checked</span>
-          </div>
-          <div>
-            <strong>&lt; 10 min</strong>
-            <span>to request review</span>
-          </div>
-          <div>
-            <strong>1</strong>
-            <span>clear next action</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-section section" aria-labelledby="leak-places">
+      <section class="pf-system section" aria-labelledby="system-title">
         <div class="section-title">
-          <h2 id="leak-places" class="section-heading">Every place HVAC leads leak</h2>
+          <p class="eyebrow">What Ovrin owns</p>
+          <h2 id="system-title" class="section-heading">The response layer between paid demand and booked work.</h2>
         </div>
-        <div class="card-grid">
-          <article class="info-card">
-            <span class="icon-bubble" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1.3.4 2.6.6 4 .6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.4.2 2.7.6 4 .1.4 0 .8-.3 1.1l-2.2 2.2Z"/></svg></span>
-            <h3>Missed calls</h3>
-            <p>When your team is busy, driving, or on another call.</p>
+        <div class="system-grid">
+          <article>
+            <span class="icon-bubble">1</span>
+            <h3>Detect the gap</h3>
+            <p>Missed calls, form delays, after-hours inquiries, and text replies are flagged as soon as they risk going cold.</p>
           </article>
-          <article class="info-card">
-            <span class="icon-bubble" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 5v5.1l4 2.4-1 1.7-5-3V7h2Z"/></svg></span>
-            <h3>After-hours calls</h3>
-            <p>When homeowners need help after the office closes.</p>
+          <article>
+            <span class="icon-bubble">2</span>
+            <h3>Respond fast</h3>
+            <p>Ovrin calls back, texts, or follows up while the homeowner is still in buying mode.</p>
           </article>
-          <article class="info-card">
-            <span class="icon-bubble" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M4 4h16v12H5.2L4 17.2V4Zm2 2v7.8L4.8 15H20V6H6Zm2 12h9v2H8v-2Z"/></svg></span>
-            <h3>Slow follow-up</h3>
-            <p>When quote requests sit too long before someone replies.</p>
+          <article>
+            <span class="icon-bubble">3</span>
+            <h3>Qualify and route</h3>
+            <p>It captures service need, location, urgency, contact details, and the next action for your team.</p>
           </article>
-          <article class="info-card">
-            <span class="icon-bubble" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M7 3h2v2h6V3h2v2h3v16H4V5h3V3Zm11 7H6v9h12v-9Zm-5.5 7-3.3-3.3 1.4-1.4 1.9 1.9 4-4 1.4 1.4-5.4 5.4Z"/></svg></span>
-            <h3>Unbooked conversations</h3>
-            <p>When interest never turns into a confirmed appointment.</p>
+          <article>
+            <span class="icon-bubble">4</span>
+            <h3>Push to booking</h3>
+            <p>The lead becomes a calendar event, a confirmed handoff, or a clearly prioritized callback.</p>
           </article>
         </div>
       </section>
 
-      <section class="content-section section" aria-labelledby="recovery">
+      <section class="pf-scenarios section" aria-labelledby="scenarios-title">
         <div class="section-title">
-          <h2 id="recovery" class="section-heading">How Ovrin recovers revenue</h2>
+          <p class="eyebrow">Real recovery examples</p>
+          <h2 id="scenarios-title" class="section-heading">Every recovered handoff has a job behind it.</h2>
         </div>
-        <div class="steps">
-          <article class="step-card">
-            <span class="step-num">1</span>
-            <h3>Catch the lead</h3>
-            <p>Ovrin answers, texts, or follows up when your team cannot.</p>
+        <div class="scenario-grid">
+          <article>
+            <span>Emergency search traffic</span>
+            <h3>Missed call gets a callback while the homeowner is still deciding.</h3>
+            <p>Ovrin detects the missed call, replies fast, captures urgency, and routes the lead before they call the next contractor.</p>
           </article>
-          <article class="step-card">
-            <span class="step-num">2</span>
-            <h3>Qualify the need</h3>
-            <p>It captures the homeowner&rsquo;s issue, urgency, location, and contact details.</p>
+          <article>
+            <span>Quote request</span>
+            <h3>Web form gets a text follow-up instead of sitting in an inbox.</h3>
+            <p>Ovrin follows up, confirms service area and timing, then hands your team a qualified next step.</p>
           </article>
-          <article class="step-card">
-            <span class="step-num">3</span>
-            <h3>Push the next action</h3>
-            <p>It books, routes, or flags the lead so your team knows what to do next.</p>
+          <article>
+            <span>Busy office spike</span>
+            <h3>Phone, email, and text demand stays organized when your team is slammed.</h3>
+            <p>Ovrin keeps the booking path moving without forcing your CSR or techs to chase every lead manually.</p>
           </article>
         </div>
       </section>
 
-      <section class="content-section section audit-include" aria-labelledby="includes">
-        <div class="include-panel">
-          <h2 id="includes" class="section-heading">What your leak audit includes</h2>
-          <p class="section-intro">We look for the points where real HVAC demand may be slipping before your team ever gets a fair shot.</p>
-          <ul class="check-list">
-            <li>Missed-call review</li>
-            <li>After-hours lead-flow review</li>
-            <li>Form and quote request review</li>
-            <li>Follow-up speed check</li>
-            <li>Booking handoff review</li>
-            <li>Revenue leak summary</li>
-          </ul>
-          <div class="cta-block" style="justify-items:start">
-            <a class="button" href="/leak-audit" data-event="hero_cta_clicked">Get Leak Audit</a>
-          </div>
+      <section class="pf-audit section" aria-labelledby="audit-title">
+        <div>
+          <p class="eyebrow">Leak audit</p>
+          <h2 id="audit-title">See where your funnel is losing booked HVAC jobs.</h2>
+          <p>We review your current traffic, lead channels, follow-up speed, after-hours handling, and booking handoff so you can see the highest-value leak first.</p>
         </div>
+        <ul class="check-list">
+          <li>Identify the handoff where demand goes cold</li>
+          <li>Map phone, form, email, text, and calendar recovery points</li>
+          <li>Get a clear next step before changing your whole workflow</li>
+        </ul>
+        <a class="button" href="/leak-audit" data-event="hero_cta_clicked">Run My Leak Audit</a>
+      </section>
 
+      <section class="content-section section" aria-labelledby="faq-title">
         <div class="faq-panel" aria-labelledby="faq-title">
-          <h2 id="faq-title" class="section-heading">Frequently asked questions</h2>
-          <div class="faq-list">
-            <details data-event="faq_item_opened">
-              <summary>How does Ovrin handle calls that come in after hours or when my team misses them?</summary>
-              <p>Ovrin can answer, capture the issue, collect contact details, and trigger the next step so the lead does not sit untouched.</p>
-            </details>
-            <details data-event="faq_item_opened">
-              <summary>Will Ovrin sound robotic or natural to homeowners?</summary>
-              <p>The goal is a calm, useful, service-business experience. It should feel like a helpful front desk layer, not a gimmick.</p>
-            </details>
-            <details data-event="faq_item_opened">
-              <summary>What if we already use a scheduler, CSR team, or HVAC software?</summary>
-              <p>Ovrin is meant to support your existing workflow, not replace everything. The audit identifies where the current process leaks before suggesting changes.</p>
-            </details>
-            <details data-event="faq_item_opened">
-              <summary>How does Ovrin decide when to book, text, or hand the lead to a human?</summary>
-              <p>The workflow can be designed around urgency, job type, service area, business hours, and your preferred booking rules.</p>
-            </details>
-            <details data-event="faq_item_opened">
-              <summary>How long does setup take and what do you need from us?</summary>
-              <p>The audit starts with your current lead flow, website or Google Business Profile, call handling process, and follow-up process.</p>
-            </details>
-            <details data-event="faq_item_opened">
-              <summary>Can Ovrin work if our team still wants final control over bookings?</summary>
-              <p>Yes. The system can capture and qualify leads, then route them to your team for final confirmation.</p>
-            </details>
-            <details data-event="faq_item_opened">
-              <summary>What happens if someone calls with an emergency or something the system is unsure about?</summary>
-              <p>The system should escalate, flag, or route unclear cases based on your rules instead of pretending to know everything.</p>
-            </details>
+          <div class="section-title">
+            <h2 id="faq-title" class="section-heading">Questions HVAC owners ask first</h2>
           </div>
+          <details data-event="faq_item_opened">
+            <summary>Does Ovrin replace my CSR or answering service?</summary>
+            <p>No. Ovrin is a response and recovery layer for the moments your current process misses, delays, or drops a lead.</p>
+          </details>
+          <details data-event="faq_item_opened">
+            <summary>What happens after hours?</summary>
+            <p>Ovrin can reply, call back, capture the issue, and route urgent or qualified leads based on your rules.</p>
+          </details>
+          <details data-event="faq_item_opened">
+            <summary>Can it work with our existing forms, phone, or calendar?</summary>
+            <p>The audit starts by mapping your current setup. The goal is to support the workflow you already use before suggesting changes.</p>
+          </details>
+          <details data-event="faq_item_opened">
+            <summary>What does the leak audit actually show?</summary>
+            <p>It shows where leads are most likely to stall: missed calls, slow form replies, after-hours handling, text/email follow-up, or booking handoff.</p>
+          </details>
         </div>
       </section>
     </main>
