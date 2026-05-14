@@ -667,6 +667,39 @@ details p {
   line-height: 1.55;
 }
 
+.audit-hero,
+.thank-hero {
+  padding-bottom: 34px;
+}
+
+.audit-trust-strip {
+  max-width: 780px;
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.audit-trust-strip span {
+  min-height: 74px;
+  padding: 14px;
+  display: grid;
+  align-content: center;
+  gap: 4px;
+  border: 1px solid rgba(8, 53, 29, .08);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,.9);
+  box-shadow: var(--shadow-sm);
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.25;
+}
+
+.audit-trust-strip strong {
+  color: #082015;
+  font-size: 1.08rem;
+}
+
 .audit-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.18fr) minmax(310px, .82fr);
@@ -677,6 +710,13 @@ details p {
 
 .form-card {
   padding: clamp(20px, 4vw, 34px);
+}
+
+.audit-page .form-card,
+.audit-page .next-panel,
+.thank-page .booking-card,
+.thank-page .call-card {
+  border-radius: 16px;
 }
 
 .form-grid {
@@ -711,6 +751,15 @@ input[type="url"] {
   border-radius: var(--radius);
   background: #fff;
   color: var(--ink);
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus {
+  border-color: rgba(10, 174, 42, .56);
+  box-shadow: 0 0 0 4px rgba(10, 174, 42, .12);
 }
 
 input::placeholder {
@@ -779,6 +828,38 @@ fieldset {
   padding: clamp(22px, 4vw, 30px);
 }
 
+.audit-map-card {
+  margin-bottom: 24px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  border: 1px solid rgba(10, 174, 42, .18);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 80% 10%, rgba(10, 174, 42, .15), transparent 11rem),
+    linear-gradient(180deg, #fbfffc, #fff);
+}
+
+.audit-map-card div {
+  min-height: 42px;
+  padding: 11px 12px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(8, 53, 29, .08);
+  border-radius: var(--radius);
+  background: #fff;
+  color: #0e2115;
+  font-weight: 780;
+}
+
+.audit-map-card i {
+  width: 2px;
+  height: 16px;
+  justify-self: center;
+  background: linear-gradient(180deg, rgba(10,174,42,.2), var(--green));
+}
+
 .next-panel h2,
 .booking-card h2,
 .call-card h2 {
@@ -801,6 +882,19 @@ fieldset {
   grid-template-columns: 36px 1fr;
   gap: 12px;
   align-items: center;
+}
+
+.next-steps.detailed li {
+  align-items: start;
+  grid-template-columns: 38px 1fr;
+}
+
+.next-steps.detailed p {
+  grid-column: 2;
+  margin: -8px 0 0;
+  color: var(--muted);
+  font-size: .92rem;
+  line-height: 1.42;
 }
 
 .next-steps span,
@@ -858,6 +952,70 @@ fieldset {
   text-align: center;
 }
 
+.review-card {
+  margin: 24px 0;
+  padding: 18px;
+  border: 1px solid rgba(10, 174, 42, .2);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 82% 10%, rgba(10, 174, 42, .14), transparent 12rem),
+    #fbfffc;
+}
+
+.review-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #0b3d1e;
+  font-weight: 820;
+}
+
+.review-card-top strong {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: var(--green-soft);
+  color: var(--green-dark);
+  font-size: .86rem;
+}
+
+.review-card ol {
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+.review-card li {
+  min-height: 54px;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border: 1px solid rgba(8, 53, 29, .08);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.review-card li span {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-weight: 850;
+}
+
+.review-card p {
+  margin: 0;
+  color: #1d2b23;
+  font-weight: 700;
+}
+
 .small-note {
   color: var(--muted);
   font-size: .92rem;
@@ -886,6 +1044,10 @@ fieldset {
 
   .next-panel {
     position: static;
+  }
+
+  .audit-trust-strip {
+    grid-template-columns: 1fr;
   }
 
   .footer-inner {
@@ -979,6 +1141,18 @@ fieldset {
   .footer-links {
     flex-wrap: wrap;
     gap: 16px 22px;
+  }
+
+  .page-hero h1 {
+    width: min(300px, calc(100vw - 64px));
+    max-width: 300px;
+    font-size: clamp(1.78rem, 6.8vw, 2.04rem);
+    line-height: 1.03;
+  }
+
+  .page-hero p {
+    width: min(300px, calc(100vw - 64px));
+    max-width: 300px;
   }
 }
 
