@@ -1,6 +1,4 @@
 (function () {
-  const seenVideoMarks = new Set();
-
   function track(name, detail = {}) {
     if (!name) return;
     window.dispatchEvent(new CustomEvent("ovrin:event", { detail: { name, ...detail } }));
@@ -10,7 +8,7 @@
   document.addEventListener("click", (event) => {
     const target = event.target.closest("[data-event]");
     if (!target) return;
-    if (target.matches("[data-vsl-player], button[type='submit']")) return;
+    if (target.matches("button[type='submit']")) return;
     track(target.dataset.event, { label: target.getAttribute("aria-label") || target.textContent.trim().slice(0, 80) });
   });
 
@@ -20,32 +18,68 @@
     });
   });
 
-  const player = document.querySelector("[data-vsl-player]");
-  if (player) {
-    const progress = player.querySelector(".player-progress");
-    player.addEventListener("click", () => {
-      if (player.dataset.playing === "true") return;
-      player.dataset.playing = "true";
-      track(player.dataset.event || "vsl_play_clicked");
-      let pct = 10;
-      const marks = [
-        [25, player.dataset.event25 || "vsl_25_percent_watched"],
-        [50, player.dataset.event50 || "vsl_50_percent_watched"],
-        [75, player.dataset.event75 || "vsl_75_percent_watched"],
-        [100, player.dataset.eventComplete || "vsl_completed"]
-      ];
-      const timer = window.setInterval(() => {
-        pct = Math.min(100, pct + 5);
-        if (progress) progress.style.width = `${pct}%`;
-        for (const [mark, eventName] of marks) {
-          if (pct >= mark && !seenVideoMarks.has(eventName)) {
-            seenVideoMarks.add(eventName);
-            track(eventName);
-          }
+  const motionLayer = document.querySelector(".hero-motion-layer");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function formatCount(value, item) {
+    if (item.dataset.countTime === "true") {
+      const totalMinutes = Math.round(value);
+      const hour = Math.floor(totalMinutes / 60);
+      const minute = (totalMinutes % 60).toString().padStart(2, "0");
+      return `${hour}:${minute}${item.dataset.countSuffix || ""}`;
+    }
+    const rounded = Math.round(value);
+    const formatted = item.dataset.countFormat === "comma" ? rounded.toLocaleString("en-US") : String(rounded);
+    return `${item.dataset.countPrefix || ""}${formatted}${item.dataset.countSuffix || ""}`;
+  }
+
+  function runCounter(item, delay = 0) {
+    const target = Number(item.dataset.countTo || 0);
+    if (!target) return;
+    if (reduceMotion) {
+      item.textContent = formatCount(target, item);
+      return;
+    }
+    const duration = 1500;
+    const startAt = performance.now() + delay;
+    const tick = (now) => {
+      const elapsed = Math.max(0, now - startAt);
+      const progress = Math.min(1, elapsed / duration);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      item.textContent = formatCount(target * eased, item);
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  if (motionLayer && !reduceMotion && window.gsap) {
+    const gsap = window.gsap;
+    gsap.set(".hero-counter", { opacity: 0, y: 8 });
+    gsap.to(".pipe-energy", { xPercent: 28, opacity: .82, duration: 2.4, repeat: -1, yoyo: true, ease: "sine.inOut" });
+    gsap.to(".hero-visual-wrap picture img", { y: -2, scale: 1.004, duration: 2.2, repeat: -1, yoyo: true, ease: "sine.inOut" });
+    gsap.to(".crack-pulse", { scale: 1.22, opacity: .12, duration: 1.35, repeat: -1, yoyo: true, ease: "sine.inOut" });
+    gsap.to(".route", { strokeDashoffset: -38, duration: 1.5, repeat: -1, ease: "none", stagger: .14 });
+
+    gsap.utils.toArray(".motion-drop").forEach((drop, index) => {
+      gsap.to(drop, {
+        opacity: 1,
+        y: gsap.utils.wrap([88, 114, 74, 98], index),
+        scaleY: gsap.utils.wrap([1.18, 1.28, 1.08, 1.15], index),
+        duration: gsap.utils.wrap([1.45, 1.9, 1.25, 1.65], index),
+        delay: index * .28,
+        repeat: -1,
+        ease: "power1.in",
+        repeatDelay: gsap.utils.wrap([.18, .3, .38, .25], index),
+        onRepeat() {
+          gsap.set(drop, { opacity: 0, y: 0, scaleY: 1 });
         }
-        if (pct >= 100) window.clearInterval(timer);
-      }, 850);
+      });
     });
+
+    gsap.to(".hero-counter", { opacity: 1, y: 0, duration: .55, delay: .45, stagger: .24, ease: "power2.out" });
+    document.querySelectorAll(".hero-counter").forEach((item, index) => runCounter(item, 560 + index * 240));
+  } else {
+    document.querySelectorAll(".hero-counter").forEach((item) => runCounter(item));
   }
 
   const form = document.querySelector("[data-leak-audit-form]");

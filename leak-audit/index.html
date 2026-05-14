@@ -20,9 +20,15 @@
     </header>
 
     <main>
-      <section class="page-hero section" aria-labelledby="audit-title">
-        <h1 id="audit-title">Want me to show where your HVAC leads may be leaking?</h1>
-        <p>Answer a few questions and we&rsquo;ll review your current lead flow before the call.</p>
+      <section class="page-hero audit-hero section" aria-labelledby="audit-title">
+        <p class="eyebrow">Leak audit request</p>
+        <h1 id="audit-title">Show us your lead flow. We&rsquo;ll show where booked jobs may be slipping.</h1>
+        <p>Ovrin reviews how traffic becomes calls, forms, texts, emails, and calendar bookings so the biggest response gap is obvious before you change your workflow.</p>
+        <div class="audit-trust-strip" aria-label="Audit expectations">
+          <span><strong>5 min</strong> to request</span>
+          <span><strong>No pressure</strong> sales call</span>
+          <span><strong>Clear map</strong> of leak points</span>
+        </div>
       </section>
 
       <section class="audit-layout section" aria-label="Leak audit request form">
@@ -30,11 +36,11 @@
           <div class="form-grid">
             <div class="field">
               <label for="full-name">Full name</label>
-              <input id="full-name" name="full_name" type="text" autocomplete="name" required>
+              <input id="full-name" name="full_name" type="text" autocomplete="name" placeholder="e.g. John Smith" required>
             </div>
             <div class="field">
               <label for="company">HVAC company</label>
-              <input id="company" name="company" type="text" autocomplete="organization" required>
+              <input id="company" name="company" type="text" autocomplete="organization" placeholder="e.g. Smith Heating & Cooling" required>
             </div>
             <div class="field full">
               <label for="website">Website or Google Business Profile</label>
@@ -42,17 +48,17 @@
             </div>
             <div class="field">
               <label for="email">Work email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="name@company.com" required>
             </div>
             <div class="field">
               <label for="phone">Phone number</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(512) 555-1234" required>
             </div>
 
             <fieldset>
               <legend class="group-label">How are new leads usually handled today?</legend>
               <div class="option-row">
-                <label class="pill-option"><input type="radio" name="lead_handling" value="We call back manually"><span>We call back manually</span></label>
+                <label class="pill-option"><input type="radio" name="lead_handling" value="We call back manually" required><span>We call back manually</span></label>
                 <label class="pill-option"><input type="radio" name="lead_handling" value="Front desk / CSR"><span>Front desk / CSR</span></label>
                 <label class="pill-option"><input type="radio" name="lead_handling" value="Answering service"><span>Answering service</span></label>
                 <label class="pill-option"><input type="radio" name="lead_handling" value="CRM automations"><span>CRM automations</span></label>
@@ -63,7 +69,7 @@
             <fieldset>
               <legend class="group-label">How are after-hours calls handled today?</legend>
               <div class="option-row">
-                <label class="pill-option"><input type="radio" name="after_hours" value="Voicemail"><span>Voicemail</span></label>
+                <label class="pill-option"><input type="radio" name="after_hours" value="Voicemail" required><span>Voicemail</span></label>
                 <label class="pill-option"><input type="radio" name="after_hours" value="Answering service"><span>Answering service</span></label>
                 <label class="pill-option"><input type="radio" name="after_hours" value="We answer live"><span>We answer live</span></label>
                 <label class="pill-option"><input type="radio" name="after_hours" value="Not sure"><span>Not sure</span></label>
@@ -73,7 +79,7 @@
             <fieldset>
               <legend class="group-label">Approx. inbound calls or leads per week</legend>
               <div class="range-row">
-                <label class="pill-option"><input type="radio" name="weekly_leads" value="0-10"><span>0&ndash;10</span></label>
+                <label class="pill-option"><input type="radio" name="weekly_leads" value="0-10" required><span>0&ndash;10</span></label>
                 <label class="pill-option"><input type="radio" name="weekly_leads" value="11-25"><span>11&ndash;25</span></label>
                 <label class="pill-option"><input type="radio" name="weekly_leads" value="26-50"><span>26&ndash;50</span></label>
                 <label class="pill-option"><input type="radio" name="weekly_leads" value="51-100"><span>51&ndash;100</span></label>
@@ -84,7 +90,7 @@
             <fieldset>
               <legend class="group-label">What software do you use today?</legend>
               <div class="option-row">
-                <label class="pill-option"><input type="radio" name="software" value="ServiceTitan"><span>ServiceTitan</span></label>
+                <label class="pill-option"><input type="radio" name="software" value="ServiceTitan" required><span>ServiceTitan</span></label>
                 <label class="pill-option"><input type="radio" name="software" value="Housecall Pro"><span>Housecall Pro</span></label>
                 <label class="pill-option"><input type="radio" name="software" value="Jobber"><span>Jobber</span></label>
                 <label class="pill-option"><input type="radio" name="software" value="Other"><span>Other</span></label>
@@ -101,13 +107,22 @@
         </form>
 
         <aside class="next-panel" aria-labelledby="next-title">
+          <div class="audit-map-card" aria-hidden="true">
+            <div>Traffic</div>
+            <i></i>
+            <div>Phone / form / text</div>
+            <i></i>
+            <div>Ovrin review</div>
+            <i></i>
+            <div>Booking gap</div>
+          </div>
           <h2 id="next-title">What happens next</h2>
-          <ol class="next-steps">
-            <li><span>1</span><strong>We review your setup</strong></li>
-            <li><span>2</span><strong>We spot likely leaks</strong></li>
-            <li><span>3</span><strong>We walk through the findings on a call</strong></li>
+          <ol class="next-steps detailed">
+            <li><span>1</span><strong>We map how leads arrive today</strong><p>Google, Local, Facebook, forms, calls, texts, email, and after-hours flow.</p></li>
+            <li><span>2</span><strong>We find the likely response gaps</strong><p>Missed calls, slow form replies, manual callbacks, and booking handoff friction.</p></li>
+            <li><span>3</span><strong>You get a practical recovery plan</strong><p>Clear next steps for what Ovrin should catch, reply to, qualify, or route.</p></li>
           </ol>
-          <div class="reassurance">No pressure. No obligation. Just clarity.</div>
+          <div class="reassurance">No pressure. No obligation. Just the leak map.</div>
         </aside>
       </section>
     </main>

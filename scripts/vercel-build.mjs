@@ -9,6 +9,7 @@ await fs.mkdir(out, { recursive: true });
 
 const files = [
   "index.html",
+  "prototype.html",
   "styles.css",
   "script.js",
   "robots.txt",

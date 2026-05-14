@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ovrin Visual Spec</title>
+    <style>
+      :root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #07140d; background: #f7faf8; }
+      body { margin: 0; padding: 32px; }
+      main { max-width: 1120px; margin: 0 auto; display: grid; gap: 22px; }
+      section { background: #fff; border: 1px solid #e4ebe6; border-radius: 8px; padding: 22px; box-shadow: 0 12px 30px rgba(12,28,18,.06); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1 { font-size: clamp(2.1rem, 5vw, 4.5rem); line-height: 1; max-width: 860px; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+      .card { border: 1px solid #e6ebe7; border-radius: 8px; padding: 14px; background: #fbfdfb; }
+      .tag { display: inline-flex; padding: 4px 9px; border-radius: 999px; background: #eaf9ee; color: #0aae2a; font-weight: 800; font-size: .82rem; }
+      table { width: 100%; border-collapse: collapse; }
+      th, td { padding: 12px; border-bottom: 1px solid #e6ebe7; text-align: left; vertical-align: top; }
+      code { background: #eef4f0; padding: 2px 5px; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <span class="tag">Objective</span>
+        <h1>Restart Ovrin as a simple, functional no-video lander.</h1>
+        <p>Make the first screen explain the leak, show that Ovrin recovers demand, and push HVAC owners toward a leak audit without relying on a media player section.</p>
+      </section>
+
+      <section>
+        <h2>Success Criteria</h2>
+        <div class="grid">
+          <div class="card"><h3>No Video</h3><p>No fake player, media section, or video tracking code.</p></div>
+          <div class="card"><h3>Functional</h3><p>Static HTML/CSS/JS, existing audit form route, build/check pass.</p></div>
+          <div class="card"><h3>Editable</h3><p>Design system lives in <code>DESIGN.md</code>; variants live in <code>prototype.html</code>.</p></div>
+          <div class="card"><h3>Brand Aligned</h3><p>Black ink, white space, Ovrin green, copper/water only as metaphor.</p></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Three Prototype Directions</h2>
+        <table>
+          <thead><tr><th>Variant</th><th>Best For</th><th>Tradeoff</th><th>Pick?</th></tr></thead>
+          <tbody>
+            <tr><td>Leak Detector</td><td>Fast conversion and pain clarity.</td><td>Most direct, least subtle.</td><td>Recommended</td></tr>
+            <tr><td>Pipe Fitter</td><td>Trust, process, established operators.</td><td>Less immediate emotional punch.</td><td>Secondary</td></tr>
+            <tr><td>Green Drip</td><td>Memorable, bold, modern landing feel.</td><td>Risk of feeling too clever.</td><td>Exploratory</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Skill Value Map</h2>
+        <div class="grid">
+          <div class="card"><h3>Strategy</h3><p><code>grill-me</code>, <code>design-consultation</code>, and <code>DESIGN.md</code> clarify who the page is for and what rules it follows.</p></div>
+          <div class="card"><h3>Exploration</h3><p><code>visual-thinking-spec</code>, <code>prototype</code>, and <code>design-shotgun</code> create inspectable options before committing.</p></div>
+          <div class="card"><h3>Build</h3><p><code>codex-deepseek-secure</code> supplies worker output; <code>design-html</code> turns the approved direction into static HTML/CSS.</p></div>
+          <div class="card"><h3>Verify / Ship</h3><p><code>playwright</code>, <code>design-review</code>, GitHub, and Vercel prove and ship the final result.</p></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Build Sequence</h2>
+        <p>Secure `.env`, use DeepSeek for raw directions, create `DESIGN.md`, build `prototype.html`, remove video from production, verify with static checks/build/screenshots, then choose the final direction for deeper implementation.</p>
+      </section>
+    </main>
+  </body>
+</html>
